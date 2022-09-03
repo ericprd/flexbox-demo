@@ -1,0 +1,61 @@
+.box-container-1,
+.box-container-2 {
+  max-width: 100%;
+  border: 1px solid red;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.box-container-1 {
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.nav p {
+  font-size: 40px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.list-item:not(:last-child) {
+  border-right: 1px solid #aaa;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav,
+  .list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-item:not(:last-child) {
+    border: none;
+    padding: 0;
+  }
+}
